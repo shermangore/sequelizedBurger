@@ -1,0 +1,30 @@
+body {
+    background-color: #FFCD54;
+}
+
+.center {
+    text-align: center;
+}
+
+#burger-meister {
+    width: 255px;
+    height: 202px;
+}
+
+.max {
+height: 60px;
+}
+
+#button-image {
+    width: 48px;
+    /* height: 10px; */
+}
+
+#submit {
+    margin-top: 6px;
+}
+
+#spnInstructions {
+    font-weight: bold;
+    font-size: 14px;
+}

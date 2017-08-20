@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css" />
+	<link rel="icon" type="image/png" href="./favicon.ico">
+	<title>Eat-Da-Burger!</title>
+</head>
+
+<body>
+	{{{ body }}}
+
+	<div class="modal fade bs-example-modal-sm" tabindex="-1" id="mdlWarning" role="dialog" aria-labelledby="mySmallModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">
+						Error!
+					</div>
+				</div>
+				<div class="modal-body">
+					You must enter a name and a burger!
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>
+	$("#btnAdd").on("click", function () {
+		let custName = $("#customer_name").val();
+		let burgerOrder = $("#burger-name").val();
+
+		if (custName === "" || burgerOrder === "") {
+			$('#mdlWarning').modal('show');
+			return false;
+		}
+	})
+
+</script>
+
+</html>

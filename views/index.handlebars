@@ -1,0 +1,45 @@
+<div class="row center"><img src="./assets/img/burger.png" alt="NOM NOM" id="burger-meister"></div>
+<h1 class="center">Eat-Da-Burger!</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-7">
+          {{#each burger}}
+            {{#unless this.devoured}}
+              <div class="row">
+                <div class="col-lg-9">
+                      <div class="well well-default">{{this.burger_name}} - ordered by {{this.customer.customer_name}}</div> 
+                </div>
+                <div class="col-lg-3">
+                    <form action="/{{this.id}}?_method=PUT" method="POST">
+                      <button type="submit" id="submit" title="Click for some nom nom!" class="btn btn-default"> Devour! <img src="https://static.fjcdn.com/gifs/Om_257ef0_1602654.gif" id="button-image"></button>
+                      <input type="hidden" name="devoured" value="true">
+                    </form>
+                </div>
+              </div>
+            {{/unless}}
+          {{/each}}
+    </div>
+    <div class="col-lg-5">
+      <div class="row">
+        {{#each burger}}
+          {{#if this.devoured}}
+            <div class="well well-default">
+            {{this.burger_name}} was eaten by {{this.customer.customer_name}}
+            </div>
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  <div class="row center">
+    <h2>Add a burger</h2>
+    <form class="create-update-form" action="/" method="POST">
+      <div class="form-group">
+        <input type="text" id="customer_name" name="customer_name" placeholder="Enter your name"><br />
+        <textarea id="burger-name" name="name" placeholder="Burger Name" cols="60" rows="5"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" id="btnAdd" title="Click to add new burger">Add burger</button>
+    </form>
+    <span id="spnInstructions">Enter a burger you want to eat and click the "Add Burger" button</span>
+  </div>
+</div>
