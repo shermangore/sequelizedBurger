@@ -1,13 +1,11 @@
 # Eat-Da-Burger
-A simple Node/Express/Handlebars app that allows a user to input a custom burger order, then devour any existing burger
+An updated Node/Express/Handlebars/Sequelize app that allows a user to input a custom burger order, then devour any existing burger
 .
 ## Installation
 1) git clone the repository to your local computer
 2) git bash into the directory created by the clone
 3) run npm install
-4) run schema.sql in appropriate MySql database
-5) update connection string to reflect credentials for your DB instance
-6) [optional] run seeds.sql in appropriate database to get prepopulated data for app
+4) update connection string to reflect credentials for your DB instance
 
 ## Usage
 ### The application is fairly self-explanatory.  Enter a burger order (name and/or ingredients) in the text box, then click the "Add Burger" button
@@ -36,7 +34,7 @@ A simple Node/Express/Handlebars app that allows a user to input a custom burger
 5. Submit a pull request :D
 
 ## History
-Created 8/12/2017
+Created 8/20/2017
 
 ## Credits
 Sherman Gore
